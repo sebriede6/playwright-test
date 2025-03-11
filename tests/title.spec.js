@@ -8,6 +8,6 @@ test.describe('Titel-Tests', () => {
 
   test('wikipedia.org hat den Titel "Wikipedia"', async ({ page }) => {
     await page.goto('https://www.wikipedia.org/');
-    await expect(page).toHaveTitle(/Wikipedia/); // Regex falls der Titel noch weitere Infos enthält.
+    await expect(page).toHaveTitle(/Wikipedia/); // mit den 2 Schrägstrichen wird nicht auf groß und kleinschreibung geachtet zb 
   });
 });

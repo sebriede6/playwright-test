@@ -34,7 +34,7 @@ test("SauceDemo: Produkt in den Warenkorb und Checkout", async ({ page }) => {
   await page.click('[data-test="checkout"]');
   await page.fill('[data-test="firstName"]', "Max");
   await page.fill('[data-test="lastName"]', "Mustermann");
-  await page.fill('[data-test="postalCode"]', ""); // leer lassen
+  await page.fill('[data-test="postalCode"]', ""); 
   await page.click('[data-test="continue"]');
 
   const errorMsg = await page.locator('[data-test="error"]').innerText();
